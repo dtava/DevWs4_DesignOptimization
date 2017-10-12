@@ -9,6 +9,19 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration;
 
 
+// count zeros in a vector
+int countZeros(std::vector<double> currentVector) {
+
+  int sum=0;
+  for (size_t i=0; i<currentVector.size(); ++i) {
+    if (0 == i) {
+      sum = sum + 1;
+    }
+  }
+  return sum;
+}
+
+
 // MAIN program
 int main(int argc, char const *argv[]) {
 
@@ -59,6 +72,15 @@ int main(int argc, char const *argv[]) {
     myvector[i] = (0 == i%1000) ? 0.0 : 1.0;
   }
   // ----- END EXERCISE 2 ----- //
+
+
+  // ----- EXERCISE 3 ----- //
+  // optimize time and memory
+
+  // count the number of zeros in myvector with function decared above
+  int zeross = countZeros(myvector);
+
+  // ----- END EXERCISE 3 ----- //
 
 
   /* end code */
