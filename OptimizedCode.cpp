@@ -10,7 +10,7 @@ using std::chrono::duration;
 
 
 // count zeros in a vector
-int countZeros(std::vector<double>& currentVector) {
+int countZeros(std::vector<double> currentVector) {
 
   int sum=0;
   for (size_t i=0; i<currentVector.size(); ++i) {
