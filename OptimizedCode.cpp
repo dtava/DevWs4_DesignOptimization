@@ -40,6 +40,27 @@ int main(int argc, char const *argv[]) {
   // ----- END EXERCISE 1 ----- //
 
 
+  // ----- EXERCISE 2 ----- // - possible solution
+  // optimize time
+
+  // fill matrix with column numbers
+  for (size_t i=0; i<1e4; i++) {
+    for (size_t j=0; j<1e4; j++) {
+      mymatrix[i][j] = j;
+    }
+  }
+
+  // delete mymatrix
+  std::vector<std::vector<double>>().swap(mymatrix);
+
+
+  // set all elements multiples of 1e3 to zero
+  for (size_t i=0; i<myvector.size(); i+=1000) {
+    myvector[i] = 0.0;
+  }
+  // ----- END EXERCISE 2 ----- //
+
+
   /* end code */
 
   auto te = high_resolution_clock::now();
